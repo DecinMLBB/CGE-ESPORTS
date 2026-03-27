@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard FF - CCE</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f0f1a, #050509);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(0,0,0,0.6);
+      border-bottom: 1px solid rgba(0,255,255,0.2);
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      color: cyan;
+      font-size: 1.2rem;
+    }
+
+    nav .menu-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 5px 8px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background: cyan;
+      color: black;
+    }
+
+    /* CONTENT */
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      flex-direction: column;
+    }
+
+    .coming {
+      font-size: 2rem;
+      color: cyan;
+      text-shadow: 0 0 20px cyan;
+      margin-bottom: 10px;
+    }
+
+    .sub {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* ANIMATION */
+    .coming {
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px cyan;
+      }
+      to {
+        text-shadow: 0 0 25px cyan;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.7rem;
+      color: #777;
+      border-top: 1px solid rgba(0,255,255,0.2);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <h1>CCE</h1>
+  <div class="menu-nav">
+    <a href="index.html">Home</a>
+    <a href="leaderboard-ml.html">ML</a>
+    <a href="leaderboard-ff.html">FF</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="coming">COMING SOON!</div>
+  <div class="sub">Leaderboard Free Fire sedang disiapkan...</div>
+</div>
+
+<footer>
+  <p>© 2026 Conggeang Community Esports</p>
+</footer>
+
+</body>
+</html>
