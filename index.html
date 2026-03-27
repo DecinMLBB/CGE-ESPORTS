@@ -24,68 +24,81 @@
     nav {
       display: flex;
       justify-content: space-between;
-      padding: 20px 50px;
+      align-items: center;
+      padding: 15px 20px;
       background: rgba(0,0,0,0.6);
       border-bottom: 1px solid rgba(0,255,255,0.2);
+      flex-wrap: wrap;
     }
 
     nav h1 {
       color: cyan;
-      text-shadow: 0 0 10px cyan;
+      font-size: 1.2rem;
+    }
+
+    nav .menu-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
     }
 
     nav a {
       color: white;
-      margin-left: 20px;
       text-decoration: none;
+      font-size: 0.8rem;
+      padding: 5px 8px;
+      border-radius: 5px;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: cyan;
-      text-shadow: 0 0 10px cyan;
+      background: cyan;
+      color: black;
     }
 
     /* HERO */
     .hero {
-      height: 70vh;
+      height: 60vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       text-align: center;
+      padding: 20px;
     }
 
     .hero h2 {
-      font-size: 3rem;
+      font-size: 1.8rem;
       color: cyan;
-      text-shadow: 0 0 20px cyan;
     }
 
     .hero p {
       margin-top: 10px;
       color: #aaa;
+      font-size: 0.9rem;
     }
 
-    /* MENU GRID */
+    /* MENU */
     .menu {
-      padding: 50px;
+      padding: 30px 20px;
     }
 
     .menu h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: cyan;
+      font-size: 1.3rem;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
 
     .card {
-      padding: 20px;
+      padding: 15px;
       border: 1px solid rgba(0,255,255,0.2);
       border-radius: 10px;
       text-align: center;
@@ -94,9 +107,17 @@
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 20px cyan;
-      border-color: cyan;
+      box-shadow: 0 0 15px cyan;
+    }
+
+    .card h3 {
+      font-size: 0.9rem;
+    }
+
+    .card p {
+      font-size: 0.7rem;
+      color: #bbb;
+      margin-top: 5px;
     }
 
     .card a {
@@ -108,9 +129,60 @@
     /* FOOTER */
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+      font-size: 0.7rem;
       color: #777;
       border-top: 1px solid rgba(0,255,255,0.2);
+      margin-top: 20px;
+    }
+
+    /* DESKTOP */
+    @media(min-width: 768px) {
+
+      nav {
+        padding: 20px 50px;
+      }
+
+      nav h1 {
+        font-size: 1.5rem;
+      }
+
+      nav .menu-nav {
+        margin-top: 0;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .hero {
+        height: 75vh;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .menu {
+        padding: 50px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+        gap: 20px;
+      }
+
+      .card h3 {
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
     }
 
   </style>
@@ -121,73 +193,72 @@
   <!-- NAVBAR -->
   <nav>
     <h1>CCE</h1>
-    <div>
+    <div class="menu-nav">
       <a href="index.html">Home</a>
-      <a href="leaderboard-ml.html">Leaderboard ML</a>
-      <a href="leaderboard-ff.html">Leaderboard FF</a>
+      <a href="leaderboard-ml.html">ML</a>
+      <a href="leaderboard-ff.html">FF</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <div class="hero">
     <h2>Conggeang Community Esports</h2>
-    <p>Komunitas gamers Conggeang yang fokus pada kompetisi dan solidaritas.</p>
+    <p>Komunitas gamers Conggeang yang siap naik level.</p>
   </div>
 
   <!-- MENU -->
   <section class="menu">
-    <h2>Menu Utama</h2>
+    <h2>Menu</h2>
 
     <div class="grid">
 
       <div class="card">
         <a href="leaderboard-ml.html">
           <h3>Leaderboard MLBB</h3>
-          <p>Klasemen Mobile Legends</p>
+          <p>Klasemen ML</p>
         </a>
       </div>
 
       <div class="card">
         <a href="leaderboard-ff.html">
-          <h3>Leaderboard Free Fire</h3>
-          <p>Klasemen Free Fire</p>
+          <h3>Leaderboard FF</h3>
+          <p>Klasemen FF</p>
         </a>
       </div>
 
       <div class="card">
         <a href="jadwal-ml.html">
-          <h3>Jadwal MLBB</h3>
-          <p>Match & Turnamen</p>
+          <h3>Jadwal ML</h3>
+          <p>Match MLBB</p>
         </a>
       </div>
 
       <div class="card">
         <a href="jadwal-ff.html">
-          <h3>Jadwal Free Fire</h3>
-          <p>Match & Turnamen</p>
+          <h3>Jadwal FF</h3>
+          <p>Match FF</p>
         </a>
       </div>
 
       <div class="card">
         <a href="tim-ml.html">
-          <h3>Tim MLBB</h3>
-          <p>Daftar Tim Partisipasi</p>
+          <h3>Tim ML</h3>
+          <p>Peserta MLBB</p>
         </a>
       </div>
 
       <div class="card">
         <a href="tim-ff.html">
-          <h3>Tim Free Fire</h3>
-          <p>Daftar Tim Partisipasi</p>
+          <h3>Tim FF</h3>
+          <p>Peserta FF</p>
         </a>
       </div>
 
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Conggeang Community Esports</p>
+    <p>© 2026 CCE</p>
   </footer>
 
 </body>
