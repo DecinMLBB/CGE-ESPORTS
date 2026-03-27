@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCE - Conggeang Community Esports</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f0f1a, #050509);
+      color: white;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.6);
+      border-bottom: 1px solid rgba(0,255,255,0.2);
+    }
+
+    nav h1 {
+      color: cyan;
+      text-shadow: 0 0 10px cyan;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: cyan;
+      text-shadow: 0 0 10px cyan;
+    }
+
+    /* HERO */
+    .hero {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: cyan;
+      text-shadow: 0 0 20px cyan;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      color: #aaa;
+    }
+
+    /* MENU GRID */
+    .menu {
+      padding: 50px;
+    }
+
+    .menu h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: cyan;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid rgba(0,255,255,0.2);
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px cyan;
+      border-color: cyan;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      border-top: 1px solid rgba(0,255,255,0.2);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>CCE</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="leaderboard-ml.html">Leaderboard ML</a>
+      <a href="leaderboard-ff.html">Leaderboard FF</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Conggeang Community Esports</h2>
+    <p>Komunitas gamers Conggeang yang fokus pada kompetisi dan solidaritas.</p>
+  </div>
+
+  <!-- MENU -->
+  <section class="menu">
+    <h2>Menu Utama</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <a href="leaderboard-ml.html">
+          <h3>Leaderboard MLBB</h3>
+          <p>Klasemen Mobile Legends</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="leaderboard-ff.html">
+          <h3>Leaderboard Free Fire</h3>
+          <p>Klasemen Free Fire</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="jadwal-ml.html">
+          <h3>Jadwal MLBB</h3>
+          <p>Match & Turnamen</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="jadwal-ff.html">
+          <h3>Jadwal Free Fire</h3>
+          <p>Match & Turnamen</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="tim-ml.html">
+          <h3>Tim MLBB</h3>
+          <p>Daftar Tim Partisipasi</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="tim-ff.html">
+          <h3>Tim Free Fire</h3>
+          <p>Daftar Tim Partisipasi</p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Conggeang Community Esports</p>
+  </footer>
+
+</body>
+</html>
