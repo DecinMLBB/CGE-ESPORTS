@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard MLBB - CCE</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f0f1a, #050509);
+      color: white;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(0,0,0,0.6);
+      border-bottom: 1px solid rgba(0,255,255,0.2);
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      color: cyan;
+      font-size: 1.2rem;
+    }
+
+    nav .menu-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: cyan;
+      color: black;
+    }
+
+    /* TITLE */
+    .title {
+      text-align: center;
+      margin: 25px 0;
+      color: cyan;
+      text-shadow: 0 0 15px cyan;
+    }
+
+    /* TABLE */
+    .table-container {
+      padding: 0 15px 30px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background: rgba(0,255,255,0.1);
+      color: cyan;
+    }
+
+    tr {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+
+    tr:hover {
+      background: rgba(0,255,255,0.05);
+    }
+
+    /* TEAM */
+    .team {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+
+    .team img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid cyan;
+    }
+
+    /* RANK STYLE */
+    .rank-1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-weight: bold;
+    }
+
+    .rank-2 {
+      color: silver;
+      text-shadow: 0 0 10px silver;
+      font-weight: bold;
+    }
+
+    .rank-3 {
+      color: #cd7f32;
+      text-shadow: 0 0 10px #cd7f32;
+      font-weight: bold;
+    }
+
+    tr:last-child {
+      opacity: 0.7;
+    }
+
+    /* MOBILE */
+    @media(max-width: 600px){
+      nav h1 {
+        font-size: 1rem;
+      }
+
+      nav a {
+        font-size: 0.7rem;
+      }
+
+      .team {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .team img {
+        width: 25px;
+        height: 25px;
+      }
+
+      th, td {
+        font-size: 0.7rem;
+        padding: 8px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.7rem;
+      color: #777;
+      border-top: 1px solid rgba(0,255,255,0.2);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>CCE</h1>
+    <div class="menu-nav">
+      <a href="index.html">Home</a>
+      <a href="leaderboard-ml.html">ML</a>
+      <a href="leaderboard-ff.html">FF</a>
+    </div>
+  </nav>
+
+  <!-- TITLE -->
+  <h2 class="title">Leaderboard Mobile Legends</h2>
+
+  <!-- TABLE -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Tim</th>
+          <th>Match</th>
+          <th>Win</th>
+          <th>Lose</th>
+          <th>Poin</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td class="rank-1">1</td>
+          <td>
+            <div class="team">
+              <img src="assets/alpha.png">
+              <span>CCE Alpha</span>
+            </div>
+          </td>
+          <td>10</td>
+          <td>9</td>
+          <td>1</td>
+          <td>27</td>
+        </tr>
+
+        <tr>
+          <td class="rank-2">2</td>
+          <td>
+            <div class="team">
+              <img src="assets/kings.png">
+              <span>Conggeang Kings</span>
+            </div>
+          </td>
+          <td>10</td>
+          <td>8</td>
+          <td>2</td>
+          <td>24</td>
+        </tr>
+
+        <tr>
+          <td class="rank-3">3</td>
+          <td>
+            <div class="team">
+              <img src="assets/opak.png">
+              <span>Opak Squad</span>
+            </div>
+          </td>
+          <td>10</td>
+          <td>7</td>
+          <td>3</td>
+          <td>21</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>
+            <div class="team">
+              <img src="assets/noob.png">
+              <span>Noob Hunter</span>
+            </div>
+          </td>
+          <td>10</td>
+          <td>5</td>
+          <td>5</td>
+          <td>15</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>
+            <div class="team">
+              <img src="assets/lastpick.png">
+              <span>Last Pick</span>
+            </div>
+          </td>
+          <td>10</td>
+          <td>3</td>
+          <td>7</td>
+          <td>9</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>
+            <div class="team">
+              <img src="assets/warrior.png">
+              <span>Conggeang Warrior</span>
+            </div>
+          </td>
+          <td>10</td>
+          <td>2</td>
+          <td>8</td>
+          <td>6</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>© 2026 Conggeang Community Esports</p>
+  </footer>
+
+</body>
+</html>
