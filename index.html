@@ -20,7 +20,6 @@
       color: white;
     }
 
-    /* NAVBAR */
     nav {
       display: flex;
       justify-content: space-between;
@@ -59,7 +58,7 @@
 
     /* HERO */
     .hero {
-      height: 60vh;
+      height: 65vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -69,14 +68,22 @@
     }
 
     .hero h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: cyan;
+      text-shadow: 0 0 15px cyan;
     }
 
     .hero p {
       margin-top: 10px;
       color: #aaa;
       font-size: 0.9rem;
+    }
+
+    .highlight {
+      margin-top: 15px;
+      color: cyan;
+      font-size: 0.9rem;
+      text-shadow: 0 0 10px cyan;
     }
 
     /* MENU */
@@ -108,6 +115,7 @@
 
     .card:hover {
       box-shadow: 0 0 15px cyan;
+      transform: translateY(-3px);
     }
 
     .card h3 {
@@ -126,7 +134,18 @@
       display: block;
     }
 
-    /* FOOTER */
+    /* SPECIAL CARD (DAFTAR) */
+    .card.daftar {
+      border: 1px solid cyan;
+      box-shadow: 0 0 15px cyan;
+      background: rgba(0,255,255,0.05);
+    }
+
+    .card.daftar:hover {
+      box-shadow: 0 0 25px cyan;
+      transform: scale(1.03);
+    }
+
     footer {
       text-align: center;
       padding: 15px;
@@ -136,7 +155,6 @@
       margin-top: 20px;
     }
 
-    /* DESKTOP */
     @media(min-width: 768px) {
 
       nav {
@@ -145,10 +163,6 @@
 
       nav h1 {
         font-size: 1.5rem;
-      }
-
-      nav .menu-nav {
-        margin-top: 0;
       }
 
       nav a {
@@ -190,83 +204,82 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <h1>CCE</h1>
-    <div class="menu-nav">
-      <a href="index.html">Home</a>
-      <a href="leaderboard-ml.html">ML</a>
-      <a href="leaderboard-ff.html">FF</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <div class="hero">
-    <h2>Conggeang Community Esports</h2>
-    <p>Komunitas gamers Conggeang yang siap naik level.</p>
+<nav>
+  <h1>CCE</h1>
+  <div class="menu-nav">
+    <a href="index.html">Home</a>
+    <a href="leaderboard-ml.html">ML</a>
+    <a href="leaderboard-ff.html">FF</a>
   </div>
+</nav>
 
-  <!-- MENU -->
-  <section class="menu">
-    <h2>Menu</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <a href="leaderboard-ml.html">
-          <h3>Leaderboard MLBB</h3>
-          <p>Klasemen ML</p>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="leaderboard-ff.html">
-          <h3>Leaderboard FF</h3>
-          <p>Klasemen FF</p>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="jadwal-ml.html">
-          <h3>Jadwal ML</h3>
-          <p>Match MLBB</p>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="jadwal-ff.html">
-          <h3>Jadwal FF</h3>
-          <p>Match FF</p>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="tim-ml.html">
-          <h3>Tim ML</h3>
-          <p>Peserta MLBB</p>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="tim-ff.html">
-          <h3>Tim FF</h3>
-          <p>Peserta FF</p>
-        </a>
-      </div>
-
-      <div class="card">
-  <a href="daftar.html">
-    <h3>Daftar Turnamen</h3>
-    <p>Join sekarang</p>
-  </a>
+<div class="hero">
+  <h2>SELAMAT DATANG DI CCE</h2>
+  <p>Tempat player Conggeang buktiin skill & naik level.</p>
+  <p class="highlight">🔥 TURNAMEN SEDANG DIBUKA - SLOT TERBATAS!</p>
 </div>
-      
-    </div>
-  </section>
 
-  <footer>
-    <p>© 2026 CCE</p>
-  </footer>
+<section class="menu">
+  <h2>Menu</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <a href="leaderboard-ml.html">
+        <h3>Leaderboard MLBB</h3>
+        <p>Klasemen ML</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="leaderboard-ff.html">
+        <h3>Leaderboard FF</h3>
+        <p>Klasemen FF</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="jadwal-ml.html">
+        <h3>Jadwal ML</h3>
+        <p>Match MLBB</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="jadwal-ff.html">
+        <h3>Jadwal FF</h3>
+        <p>Match FF</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="tim-ml.html">
+        <h3>Tim ML</h3>
+        <p>Peserta MLBB</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="tim-ff.html">
+        <h3>Tim FF</h3>
+        <p>Peserta FF</p>
+      </a>
+    </div>
+
+    <!-- PALING PENTING -->
+    <div class="card daftar">
+      <a href="daftar.html">
+        <h3>🔥 Daftar Turnamen</h3>
+        <p>DANA & GoPay</p>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Conggeang Community Esports</p>
+</footer>
 
 </body>
 </html>
