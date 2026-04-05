@@ -16,13 +16,13 @@
     }
 
     body {
-      background: url("Background-home.png") no-repeat center center/cover;
+      background: url("background-home.png") no-repeat center center/cover;
       background-attachment: fixed;
       color: white;
       position: relative;
     }
 
-    /* OVERLAY (SUDAH DIPERBAIKI) */
+    /* OVERLAY FIX */
     body::before {
       content: "";
       position: fixed;
@@ -31,10 +31,9 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(
-        rgba(5,5,10,0.5),
-        rgba(5,5,10,0.75)
+        rgba(5,5,10,0.3),
+        rgba(5,5,10,0.6)
       );
-      backdrop-filter: blur(2px);
       z-index: -1;
     }
 
@@ -43,15 +42,15 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 20px;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.4);
       border-bottom: 1px solid rgba(0,255,255,0.2);
       flex-wrap: wrap;
     }
 
-    nav h1 {
-      color: cyan;
-      font-size: 1.2rem;
-      text-shadow: 0 0 10px cyan;
+    /* LOGO */
+    .logo {
+      width: 90px;
+      filter: drop-shadow(0 0 8px cyan);
     }
 
     nav .menu-nav {
@@ -131,13 +130,12 @@
 
     .card {
       padding: 15px;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.5);
       border: 1px solid rgba(0,255,255,0.3);
       border-radius: 10px;
       text-align: center;
       transition: 0.3s;
       cursor: pointer;
-      backdrop-filter: blur(6px);
     }
 
     .card:hover {
@@ -197,7 +195,9 @@
 <body>
 
 <nav>
-  <h1>CCE</h1>
+  <!-- GANTI TEXT JADI LOGO -->
+  <img src="logo.png" class="logo">
+
   <div class="menu-nav">
     <a href="index.html">Home</a>
     <a href="leaderboard-ml.html">ML</a>
