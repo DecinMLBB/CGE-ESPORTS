@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leaderboard FF - CCE</title>
+  <title>Leaderboard MLBB - CCE</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
@@ -18,12 +18,8 @@
     body {
       background: radial-gradient(circle at top, #0f0f1a, #050509);
       color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
-    /* NAVBAR */
     nav {
       display: flex;
       justify-content: space-between;
@@ -58,40 +54,92 @@
       color: black;
     }
 
-    /* CONTENT */
-    .container {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .title {
       text-align: center;
-      padding: 20px;
-      flex-direction: column;
-    }
-
-    .coming {
-      font-size: 2rem;
+      margin: 25px 0;
       color: cyan;
-      text-shadow: 0 0 20px cyan;
-      margin-bottom: 10px;
+      text-shadow: 0 0 15px cyan;
     }
 
-    .sub {
-      color: #aaa;
-      font-size: 0.9rem;
+    .table-container {
+      padding: 0 15px 30px;
+      overflow-x: auto;
     }
 
-    /* ANIMATION */
-    .coming {
-      animation: glow 1.5s infinite alternate;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
     }
 
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px cyan;
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background: rgba(0,255,255,0.1);
+      color: cyan;
+    }
+
+    tr {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    tr:hover {
+      background: rgba(0,255,255,0.05);
+    }
+
+    .team {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+
+    .team img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid cyan;
+    }
+
+    .rank-1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-weight: bold;
+    }
+
+    .rank-2 {
+      color: silver;
+      text-shadow: 0 0 10px silver;
+      font-weight: bold;
+    }
+
+    .rank-3 {
+      color: #cd7f32;
+      text-shadow: 0 0 10px #cd7f32;
+      font-weight: bold;
+    }
+
+    tr:last-child {
+      opacity: 0.7;
+    }
+
+    @media(max-width: 600px){
+      .team {
+        flex-direction: column;
+        align-items: center;
       }
-      to {
-        text-shadow: 0 0 25px cyan;
+
+      .team img {
+        width: 25px;
+        height: 25px;
+      }
+
+      th, td {
+        font-size: 0.7rem;
+        padding: 8px;
       }
     }
 
@@ -102,7 +150,6 @@
       color: #777;
       border-top: 1px solid rgba(0,255,255,0.2);
     }
-
   </style>
 </head>
 
@@ -117,9 +164,91 @@
   </div>
 </nav>
 
-<div class="container">
-  <div class="coming">COMING SOON!</div>
-  <div class="sub">Leaderboard Free Fire sedang disiapkan...</div>
+<h2 class="title">Leaderboard Mobile Legends</h2>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Tim</th>
+        <th>Match</th>
+        <th>Win</th>
+        <th>Lose</th>
+        <th>Poin</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td class="rank-1">1</td>
+        <td>
+          <div class="team">
+            <img src="HARVY.png">
+            <span>HARVY</span>
+          </div>
+        </td>
+        <td>0</td><td>0</td><td>0</td><td>0</td>
+      </tr>
+
+      <tr>
+        <td class="rank-2">2</td>
+        <td>
+          <div class="team">
+            <img src="NONE.png">
+            <span>NONE</span></span>
+          </div>
+        </td>
+        <td>0</td><td>0</td><td>0</td><td>0</td>
+      </tr>
+
+      <tr>
+        <td class="rank-3">3</td>
+        <td>
+          <div class="team">
+            <img src="NONE.png">
+            <span>NONE</span>
+          </div>
+        </td>
+        <td>0</td><td>0</td><td>0</td><td>0</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>
+          <div class="team">
+            <img src="NONE.png">
+            <span>NONE</span>
+          </div>
+        </td>
+        <td>0</td><td>0</td><td>0</td><td>0</td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>
+          <div class="team">
+            <img src="NONE.png">
+            <span>NONE</span>
+          </div>
+        </td>
+        <td>0</td><td>0</td><td>0</td><td>0</td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td>
+          <div class="team">
+            <img src="NONE.png">
+            <span>NONE</span>
+          </div>
+        </td>
+        <td>0</td><td>0</td><td>0</td><td>0</td>
+      </tr>
+
+    </tbody>
+  </table>
 </div>
 
 <footer>
