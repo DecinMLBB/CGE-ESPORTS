@@ -16,8 +16,22 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #0f0f1a, #050509);
+      background: url("Background home.PNG") no-repeat center center/cover;
+      position: relative;
       color: white;
+    }
+
+    /* OVERLAY BIAR GELAP + GAMING */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5,5,10,0.85);
+      backdrop-filter: blur(4px);
+      z-index: -1;
     }
 
     nav {
@@ -33,6 +47,7 @@
     nav h1 {
       color: cyan;
       font-size: 1.2rem;
+      text-shadow: 0 0 10px cyan;
     }
 
     nav .menu-nav {
@@ -58,7 +73,7 @@
 
     /* HERO */
     .hero {
-      height: 65vh;
+      height: 70vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -70,20 +85,26 @@
     .hero h2 {
       font-size: 2rem;
       color: cyan;
-      text-shadow: 0 0 15px cyan;
+      text-shadow: 0 0 20px cyan;
     }
 
     .hero p {
       margin-top: 10px;
-      color: #aaa;
+      color: #ccc;
       font-size: 0.9rem;
     }
 
     .highlight {
       margin-top: 15px;
       color: cyan;
-      font-size: 0.9rem;
-      text-shadow: 0 0 10px cyan;
+      font-size: 1rem;
+      text-shadow: 0 0 15px cyan;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px cyan; }
+      to { text-shadow: 0 0 25px cyan; }
     }
 
     /* MENU */
@@ -106,16 +127,18 @@
 
     .card {
       padding: 15px;
+      background: rgba(255,255,255,0.03);
       border: 1px solid rgba(0,255,255,0.2);
       border-radius: 10px;
       text-align: center;
       transition: 0.3s;
       cursor: pointer;
+      backdrop-filter: blur(5px);
     }
 
     .card:hover {
-      box-shadow: 0 0 15px cyan;
-      transform: translateY(-3px);
+      box-shadow: 0 0 20px cyan;
+      transform: translateY(-5px);
     }
 
     .card h3 {
@@ -134,16 +157,16 @@
       display: block;
     }
 
-    /* SPECIAL CARD (DAFTAR) */
+    /* SPECIAL CARD */
     .card.daftar {
       border: 1px solid cyan;
-      box-shadow: 0 0 15px cyan;
-      background: rgba(0,255,255,0.05);
+      box-shadow: 0 0 20px cyan;
+      background: rgba(0,255,255,0.08);
     }
 
     .card.daftar:hover {
-      box-shadow: 0 0 25px cyan;
-      transform: scale(1.03);
+      box-shadow: 0 0 35px cyan;
+      transform: scale(1.05);
     }
 
     footer {
@@ -156,46 +179,11 @@
     }
 
     @media(min-width: 768px) {
-
-      nav {
-        padding: 20px 50px;
-      }
-
-      nav h1 {
-        font-size: 1.5rem;
-      }
-
-      nav a {
-        font-size: 1rem;
-      }
-
-      .hero {
-        height: 75vh;
-      }
-
-      .hero h2 {
-        font-size: 3rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-
-      .menu {
-        padding: 50px;
-      }
-
+      .hero h2 {font-size: 3rem;}
+      .hero p {font-size: 1rem;}
       .grid {
         grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
         gap: 20px;
-      }
-
-      .card h3 {
-        font-size: 1.1rem;
-      }
-
-      .card p {
-        font-size: 0.9rem;
       }
     }
 
@@ -266,7 +254,6 @@
       </a>
     </div>
 
-    <!-- PALING PENTING -->
     <div class="card daftar">
       <a href="daftar.html">
         <h3>🔥 Daftar Turnamen</h3>
