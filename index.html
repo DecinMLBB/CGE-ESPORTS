@@ -16,7 +16,6 @@ body{
   color:white;
 }
 
-/* OVERLAY */
 body::before{
   content:"";
   position:fixed;
@@ -58,7 +57,7 @@ nav{
 
 /* HERO */
 .hero{
-  min-height:70vh;
+  min-height:65vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -82,11 +81,9 @@ nav{
 .highlight{
   margin-top:15px;
   color:cyan;
-  font-size:1rem;
   text-shadow:0 0 20px cyan;
 }
 
-/* BUTTON */
 .btn-daftar{
   margin-top:20px;
   padding:12px 28px;
@@ -104,45 +101,10 @@ nav{
   box-shadow:0 0 35px cyan;
 }
 
-/* INFO */
 .info{
   margin-top:20px;
   font-size:0.8rem;
   color:#ccc;
-}
-
-/* SPONSOR SECTION */
-.sponsor-section{
-  margin-top:40px;
-  padding:25px;
-  text-align:center;
-  background:rgba(0,0,0,0.4);
-  backdrop-filter:blur(8px);
-  border-top:1px solid rgba(0,255,255,0.2);
-  border-bottom:1px solid rgba(0,255,255,0.2);
-}
-
-.sponsor-text{
-  font-size:0.8rem;
-  color:cyan;
-  margin-bottom:20px;
-  letter-spacing:3px;
-  text-shadow:0 0 10px cyan;
-}
-
-.sponsor-logo{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.sponsor-logo img{
-  width:75px;
-  transition:0.3s;
-}
-
-.sponsor-logo img:hover{
-  transform:scale(1.15);
 }
 
 /* MENU */
@@ -191,6 +153,39 @@ nav{
   background:rgba(0,255,255,0.1);
 }
 
+/* SPONSOR (PINDAH KE BAWAH) */
+.sponsor-section{
+  margin-top:30px;
+  padding:30px 20px;
+  text-align:center;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(8px);
+  border-top:1px solid rgba(0,255,255,0.2);
+}
+
+.sponsor-text{
+  font-size:0.8rem;
+  color:cyan;
+  margin-bottom:20px;
+  letter-spacing:3px;
+  text-shadow:0 0 10px cyan;
+}
+
+.sponsor-logo{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.sponsor-logo img{
+  width:70px;
+  transition:0.3s;
+}
+
+.sponsor-logo img:hover{
+  transform:scale(1.15);
+}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -234,19 +229,7 @@ footer{
   </div>
 </div>
 
-<!-- SPONSOR (DIPISAH BIAR CLEAN) -->
-<section class="sponsor-section">
-  <p class="sponsor-text">SPONSORSHIP BY</p>
-  <div class="sponsor-logo">
-    <img src="sponsor1.png">
-    <img src="sponsor2.png">
-    <img src="sponsor3.png">
-    <img src="sponsor4.png">
-    <img src="sponsor5.png">
-    <img src="sponsor6.png">
-  </div>
-</section>
-
+<!-- MENU DI ATAS -->
 <section class="menu">
   <h2>Menu</h2>
 
@@ -264,6 +247,19 @@ footer{
         <p>DANA & GoPay</p>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- SPONSOR DI PALING BAWAH -->
+<section class="sponsor-section">
+  <p class="sponsor-text">SPONSORSHIP BY</p>
+  <div class="sponsor-logo">
+    <img src="sponsor1.png">
+    <img src="sponsor2.png">
+    <img src="sponsor3.png">
+    <img src="sponsor4.png">
+    <img src="sponsor5.png">
+    <img src="sponsor6.png">
   </div>
 </section>
 
