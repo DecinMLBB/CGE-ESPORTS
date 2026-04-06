@@ -16,11 +16,12 @@ body{
   color:white;
 }
 
+/* OVERLAY */
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background:linear-gradient(rgba(5,5,10,0.3),rgba(5,5,10,0.7));
+  background:linear-gradient(rgba(5,5,10,0.4),rgba(5,5,10,0.75));
   z-index:-1;
 }
 
@@ -30,14 +31,14 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:15px 20px;
-  background:rgba(0,0,0,0.4);
-  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(0,255,255,0.2);
 }
 
 .logo{
-  width:80px;
-  filter:drop-shadow(0 0 10px cyan);
+  width:75px;
+  filter:drop-shadow(0 0 8px cyan);
 }
 
 .menu-nav a{
@@ -57,7 +58,7 @@ nav{
 
 /* HERO */
 .hero{
-  height:80vh;
+  min-height:70vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -67,10 +68,9 @@ nav{
 }
 
 .hero h2{
-  font-size:2.3rem;
+  font-size:2.5rem;
   color:cyan;
   text-shadow:0 0 25px cyan;
-  animation:fadeUp 1s ease;
 }
 
 .hero p{
@@ -84,7 +84,6 @@ nav{
   color:cyan;
   font-size:1rem;
   text-shadow:0 0 20px cyan;
-  animation:glow 1.5s infinite alternate;
 }
 
 /* BUTTON */
@@ -112,16 +111,21 @@ nav{
   color:#ccc;
 }
 
-/* SPONSOR */
-.sponsor{
+/* SPONSOR SECTION */
+.sponsor-section{
   margin-top:40px;
+  padding:25px;
   text-align:center;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(8px);
+  border-top:1px solid rgba(0,255,255,0.2);
+  border-bottom:1px solid rgba(0,255,255,0.2);
 }
 
 .sponsor-text{
   font-size:0.8rem;
   color:cyan;
-  margin-bottom:15px;
+  margin-bottom:20px;
   letter-spacing:3px;
   text-shadow:0 0 10px cyan;
 }
@@ -129,20 +133,15 @@ nav{
 .sponsor-logo{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  justify-items:center;
+  gap:20px;
 }
 
 .sponsor-logo img{
-  width:70px;
-  opacity:0.7;
-  filter:grayscale(100%) brightness(1.2);
+  width:75px;
   transition:0.3s;
 }
 
 .sponsor-logo img:hover{
-  filter:none;
-  opacity:1;
   transform:scale(1.15);
 }
 
@@ -201,17 +200,6 @@ footer{
   border-top:1px solid rgba(0,255,255,0.2);
 }
 
-/* ANIM */
-@keyframes glow{
-  from{text-shadow:0 0 10px cyan;}
-  to{text-shadow:0 0 30px cyan;}
-}
-
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(20px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
 /* DESKTOP */
 @media(min-width:768px){
   .hero h2{font-size:3rem;}
@@ -244,27 +232,25 @@ footer{
     <p>🏆 Season 1 Tournament</p>
     <p>⏳ Segera ditutup</p>
   </div>
-
-  <!-- SPONSOR -->
-  <div class="sponsor">
-    <p class="sponsor-text">SPONSORSHIP BY</p>
-    <div class="sponsor-logo">
-      <img src="sponsor1.png">
-      <img src="sponsor2.png">
-      <img src="sponsor3.png">
-      <img src="sponsor4.png">
-      <img src="sponsor5.png">
-      <img src="sponsor6.png">
-    </div>
-  </div>
-
 </div>
+
+<!-- SPONSOR (DIPISAH BIAR CLEAN) -->
+<section class="sponsor-section">
+  <p class="sponsor-text">SPONSORSHIP BY</p>
+  <div class="sponsor-logo">
+    <img src="sponsor1.png">
+    <img src="sponsor2.png">
+    <img src="sponsor3.png">
+    <img src="sponsor4.png">
+    <img src="sponsor5.png">
+    <img src="sponsor6.png">
+  </div>
+</section>
 
 <section class="menu">
   <h2>Menu</h2>
 
   <div class="grid">
-
     <div class="card"><a href="leaderboard-ml.html"><h3>Leaderboard MLBB</h3><p>Klasemen ML</p></a></div>
     <div class="card"><a href="leaderboard-ff.html"><h3>Leaderboard FF</h3><p>Klasemen FF</p></a></div>
     <div class="card"><a href="jadwal-ml.html"><h3>Jadwal ML</h3><p>Match MLBB</p></a></div>
@@ -278,7 +264,6 @@ footer{
         <p>DANA & GoPay</p>
       </a>
     </div>
-
   </div>
 </section>
 
