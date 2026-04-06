@@ -93,7 +93,7 @@ nav {
   animation: glow 1.5s infinite alternate;
 }
 
-/* BUTTON CTA */
+/* BUTTON */
 .btn-daftar {
   margin-top: 20px;
   padding: 12px 25px;
@@ -103,12 +103,6 @@ nav {
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 0 20px cyan;
-  transition: 0.3s;
-}
-
-.btn-daftar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px cyan;
 }
 
 /* INFO */
@@ -116,6 +110,37 @@ nav {
   margin-top: 20px;
   font-size: 0.8rem;
   color: #ccc;
+}
+
+/* SPONSOR */
+.sponsor {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sponsor-text {
+  font-size: 0.8rem;
+  color: cyan;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px cyan;
+}
+
+.sponsor-logo {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.sponsor-logo img {
+  width: 80px;
+  filter: drop-shadow(0 0 10px cyan);
+  transition: 0.3s;
+}
+
+.sponsor-logo img:hover {
+  transform: scale(1.1);
 }
 
 /* MENU */
@@ -164,7 +189,6 @@ nav {
   display: block;
 }
 
-/* SPECIAL */
 .card.daftar {
   border: 1px solid cyan;
   box-shadow: 0 0 20px cyan;
@@ -187,24 +211,16 @@ footer {
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
-/* DESKTOP */
 @media(min-width:768px){
   .hero h2 {font-size: 3rem;}
   .grid {
     grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   }
 }
-
 </style>
 </head>
 
@@ -221,16 +237,26 @@ footer {
 
 <div class="hero">
   <h2>SELAMAT DATANG DI CCE</h2>
-  <p>Komunitas esports SMPN 1 Conggeang</p>
+  <p>KOMUNITAS ESPORTS CONGGEANG</p>
   <p class="highlight">🔥 TURNAMEN DIBUKA - SLOT TERBATAS!</p>
 
   <a href="daftar.html" class="btn-daftar">DAFTAR SEKARANG</a>
 
   <div class="info">
-    <p>🎮 Mode: 5v5 Draft Pick</p>
+    <p>🎮 Divisi : Mobile Legends & Free Fire</p>
     <p>🏆 Season 1 Tournament</p>
     <p>⏳ Segera ditutup</p>
   </div>
+
+  <!-- SPONSOR -->
+  <div class="sponsor">
+    <p class="sponsor-text">SPONSORSHIP BY</p>
+    <div class="sponsor-logo">
+      <img src="sponsor1.png">
+      <img src="sponsor2.png">
+    </div>
+  </div>
+
 </div>
 
 <section class="menu">
