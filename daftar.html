@@ -11,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
 
 body{
-  background: radial-gradient(circle at top,#0f0f1a,#050509);
+  background: radial-gradient(circle at top,#0b0b0f,#000);
   color:white;
 }
 
@@ -20,11 +20,13 @@ nav{
   display:flex;
   justify-content:space-between;
   padding:15px 20px;
-  background:rgba(0,0,0,0.6);
-  border-bottom:1px solid rgba(0,255,255,0.2);
+  background:#0a0a0a;
+  border-bottom:2px solid #ff1a1a;
 }
 
-nav h1{color:cyan;}
+nav h1{
+  color:#ff1a1a;
+}
 
 nav a{
   color:white;
@@ -32,14 +34,19 @@ nav a{
   font-size:0.8rem;
 }
 
-nav a:hover{color:cyan;}
+nav a:hover{
+  color:#ff1a1a;
+}
 
 /* TITLE */
 .title{
   text-align:center;
-  margin:25px 0;
-  color:cyan;
-  text-shadow:0 0 15px cyan;
+  margin:30px 0;
+  color:white;
+}
+
+.title span{
+  color:#ff1a1a;
 }
 
 /* CONTAINER */
@@ -47,21 +54,22 @@ nav a:hover{color:cyan;}
   padding:20px;
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:25px;
 }
 
 /* CARD */
 .card{
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(0,255,255,0.2);
+  background:#111;
+  border:1px solid #222;
   border-radius:12px;
   padding:20px;
   text-align:center;
+  box-shadow:0 0 20px rgba(255,0,0,0.1);
 }
 
 .card h3{
   margin-bottom:10px;
-  color:cyan;
+  color:#ff1a1a;
 }
 
 .card p{
@@ -71,39 +79,49 @@ nav a:hover{color:cyan;}
 }
 
 .highlight{
-  color:cyan;
+  color:#ff1a1a;
   font-weight:bold;
 }
 
 /* QR */
 .qr{
-  margin:15px 0;
+  margin:20px 0;
 }
 
 .qr img{
-  width:200px;
-  border-radius:10px;
-  box-shadow:0 0 20px cyan;
+  width:220px;
+  border-radius:12px;
+  border:2px solid #ff1a1a;
+  box-shadow:0 0 25px rgba(255,0,0,0.5);
 }
 
 /* BUTTON WA */
 .btn-wa{
   display:inline-block;
   margin-top:15px;
-  padding:12px 20px;
-  background:cyan;
-  color:black;
+  padding:14px 22px;
+  background:#ff1a1a;
+  color:white;
   text-decoration:none;
   border-radius:8px;
   font-size:0.85rem;
   font-weight:bold;
-  box-shadow:0 0 15px cyan;
   transition:0.3s;
 }
 
 .btn-wa:hover{
+  background:#cc0000;
   transform:scale(1.05);
-  box-shadow:0 0 30px cyan;
+}
+
+/* NOTE */
+.note{
+  text-align:left;
+  margin-top:10px;
+}
+
+.note p{
+  margin:5px 0;
 }
 
 /* FOOTER */
@@ -112,8 +130,8 @@ footer{
   padding:15px;
   font-size:0.7rem;
   color:#777;
-  border-top:1px solid rgba(0,255,255,0.2);
-  margin-top:20px;
+  border-top:1px solid #222;
+  margin-top:30px;
 }
 </style>
 </head>
@@ -125,31 +143,29 @@ footer{
   <a href="index.html">Home</a>
 </nav>
 
-<h2 class="title">Daftar Turnamen</h2>
+<h2 class="title">DAFTAR <span>TURNAMEN</span></h2>
 
 <div class="container">
 
-  <!-- PEMBAYARAN QRIS -->
+  <!-- QRIS -->
   <div class="card">
     <h3>Pembayaran QRIS</h3>
     <p>Biaya: <span class="highlight">Rp 35.000 / Tim</span></p>
 
     <div class="qr">
-      <!-- GANTI FILE QR LU DISINI -->
-      <img src="qris.png" alt="QRIS Payment">
+      <img src="qris.png" alt="QRIS">
     </div>
 
-    <p>Scan QR di atas pakai DANA / GoPay / OVO / ShopeePay</p>
+    <p>Scan pakai DANA / GoPay / OVO / ShopeePay</p>
   </div>
 
   <!-- KONFIRMASI -->
   <div class="card">
-    <h3>Konfirmasi</h3>
-    <p>Setelah bayar, klik tombol di bawah</p>
+    <h3>Konfirmasi Pembayaran</h3>
+    <p>Klik tombol di bawah lalu kirim bukti transfer</p>
 
-    <!-- AUTO ISI PESAN -->
     <a class="btn-wa"
-       href="https://wa.me/6285156287358?text=Halo%20Admin%20CCE%0ASaya%20mau%20konfirmasi%20pembayaran%20turnamen%0A%0ANama%20Tim%20:%20%0ALiga%20:%20(Mobile%20Legends%20/%20Free%20Fire)%0A%0ASaya%20akan%20kirim%20bukti%20transfer."
+       href="https://wa.me/6285156287358?text=Halo%20Admin%20CCE%0A%0ASaya%20mau%20konfirmasi%20pembayaran%20turnamen.%0A%0ANama%20Tim%20:%20%0ALiga%20:%20(Mobile%20Legends%20/%20Free%20Fire)%0A%0ASaya%20akan%20kirim%20bukti%20transfer."
        target="_blank">
        KONFIRMASI VIA WHATSAPP
     </a>
@@ -157,11 +173,13 @@ footer{
 
   <!-- CATATAN -->
   <div class="card">
-    <h3>Catatan</h3>
-    <p>• Wajib kirim bukti transfer</p>
-    <p>• Sertakan nama tim & liga</p>
-    <p>• Slot terbatas</p>
-    <p>• No drama, no refund 😈</p>
+    <h3>Catatan Penting</h3>
+    <div class="note">
+      <p>• Wajib kirim bukti transfer</p>
+      <p>• Sertakan nama tim & liga</p>
+      <p>• Slot terbatas</p>
+      <p>• No drama, no refund 😈</p>
+    </div>
   </div>
 
 </div>
