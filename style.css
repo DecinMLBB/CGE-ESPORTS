@@ -202,3 +202,48 @@ footer{
     grid-template-columns:repeat(6,1fr);
   }
 }
+
+/* TABLE */
+.table-wrapper{
+  overflow-x:auto;
+}
+
+.leaderboard{
+  width:100%;
+  min-width:600px;
+  border-collapse:collapse;
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.leaderboard th{
+  background:#8B0000;
+  color:white;
+  padding:12px;
+  font-size:0.8rem;
+}
+
+.leaderboard td{
+  padding:12px;
+  text-align:center;
+  border-bottom:1px solid #eee;
+  font-size:0.8rem;
+}
+
+.leaderboard tr:hover{
+  background:#fff5f5;
+}
+
+/* TOP 3 */
+.top1{
+  background:#fff3cd;
+}
+
+.top2{
+  background:#f1f1f1;
+}
+
+.top3{
+  background:#fbe9e7;
+}
