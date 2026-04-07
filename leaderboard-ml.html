@@ -11,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
 
 body{
-  background: radial-gradient(circle at top,#0f0f1a,#050509);
+  background: radial-gradient(circle at top, #0f0f1a, #050509);
   color:white;
 }
 
@@ -25,72 +25,56 @@ nav{
   border-bottom:1px solid rgba(0,255,255,0.2);
 }
 
-nav h1{color:cyan;font-size:1.2rem;}
-
-.menu-nav{display:flex;gap:10px;}
-
+nav h1{color:cyan;}
 nav a{
   color:white;
   text-decoration:none;
+  margin-left:10px;
   font-size:0.8rem;
-  padding:5px 8px;
-  border-radius:5px;
-  transition:0.3s;
 }
-
-nav a:hover{
-  background:cyan;
-  color:black;
-}
+nav a:hover{color:cyan;}
 
 /* TITLE */
 .title{
   text-align:center;
   margin:25px 0;
   color:cyan;
-  text-shadow:0 0 20px cyan;
-  font-size:1.8rem;
+  text-shadow:0 0 15px cyan;
+}
+
+/* TABLE WRAPPER (FIX SCROLL) */
+.table-wrapper{
+  overflow-x:auto;
+  padding-bottom:10px;
 }
 
 /* TABLE */
-.table-container{
-  padding:20px;
-}
-
-.table-box{
-  background:rgba(0,0,0,0.5);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(0,255,255,0.2);
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 0 25px rgba(0,255,255,0.15);
-}
-
 table{
   width:100%;
+  min-width:700px;
   border-collapse:collapse;
 }
 
-th,td{
+/* HEADER */
+th{
+  background:rgba(0,255,255,0.15);
+  color:cyan;
+  padding:12px;
+}
+
+/* ROW */
+td{
   padding:14px;
   text-align:center;
 }
 
-th{
-  background:rgba(0,255,255,0.15);
-  color:cyan;
-  font-size:0.75rem;
-  letter-spacing:1px;
-}
-
 tr{
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  border-bottom:1px solid rgba(255,255,255,0.1);
   transition:0.3s;
 }
 
 tr:hover{
   background:rgba(0,255,255,0.08);
-  transform:scale(1.01);
 }
 
 /* TEAM */
@@ -98,76 +82,46 @@ tr:hover{
   display:flex;
   align-items:center;
   gap:12px;
-  justify-content:flex-start;
 }
 
 .team img{
-  width:60px;
-  height:60px;
-  object-fit:cover;
-  border-radius:12px;
-  padding:4px;
-  background:rgba(0,0,0,0.6);
-
-  box-shadow:
-    0 0 10px cyan,
-    0 0 20px rgba(0,255,255,0.3);
-
-  transition:0.3s;
+  width:45px;
+  height:45px;
+  border-radius:8px;
+  border:2px solid cyan;
 }
 
-.team img:hover{
-  transform:scale(1.1);
-}
-
-.team span{
-  font-size:0.85rem;
-  letter-spacing:1px;
-}
-
-/* RANK */
-.rank-1{
-  color:gold;
-  text-shadow:0 0 12px gold;
+/* RANK STYLE */
+.rank{
   font-weight:bold;
-  font-size:1.1rem;
+  font-size:1rem;
 }
 
-.rank-2{
+/* TOP 1 */
+.top1{
+  background:rgba(255,215,0,0.1);
+}
+.top1 .rank{
+  color:gold;
+  text-shadow:0 0 10px gold;
+}
+
+/* TOP 2 */
+.top2{
+  background:rgba(192,192,192,0.1);
+}
+.top2 .rank{
   color:silver;
   text-shadow:0 0 10px silver;
-  font-weight:bold;
 }
 
-.rank-3{
+/* TOP 3 */
+.top3{
+  background:rgba(205,127,50,0.1);
+}
+.top3 .rank{
   color:#cd7f32;
   text-shadow:0 0 10px #cd7f32;
-  font-weight:bold;
-}
-
-/* LAST ROW */
-tr:last-child{
-  opacity:0.7;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-
-  .team{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-  }
-
-  .team img{
-    width:70px;
-    height:70px;
-  }
-
-  th,td{
-    font-size:0.65rem;
-    padding:8px;
-  }
 }
 
 /* FOOTER */
@@ -179,6 +133,19 @@ footer{
   border-top:1px solid rgba(0,255,255,0.2);
   margin-top:20px;
 }
+
+/* MOBILE */
+@media(max-width:600px){
+  th, td{
+    font-size:0.75rem;
+    padding:10px;
+  }
+
+  .team img{
+    width:38px;
+    height:38px;
+  }
+}
 </style>
 </head>
 
@@ -186,7 +153,7 @@ footer{
 
 <nav>
   <h1>CCE</h1>
-  <div class="menu-nav">
+  <div>
     <a href="index.html">Home</a>
     <a href="leaderboard-ml.html">ML</a>
     <a href="leaderboard-ff.html">FF</a>
@@ -195,97 +162,94 @@ footer{
 
 <h2 class="title">Leaderboard Mobile Legends</h2>
 
-<div class="table-container">
-  <div class="table-box">
+<div class="table-wrapper">
+<table>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Rank</th>
-          <th>Tim</th>
-          <th>Match</th>
-          <th>Win</th>
-          <th>Lose</th>
-          <th>Poin</th>
-        </tr>
-      </thead>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Tim</th>
+  <th>Match</th>
+  <th>Win</th>
+  <th>Lose</th>
+  <th>Poin</th>
+</tr>
+</thead>
 
-      <tbody>
+<tbody>
 
-        <tr>
-          <td class="rank-1">1</td>
-          <td>
-            <div class="team">
-              <img src="EGOIST.png">
-              <span>EGOIST</span>
-            </div>
-          </td>
-          <td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-          <td class="rank-2">2</td>
-          <td>
-            <div class="team">
-              <img src="EVOS BARDE.png">
-              <span>EVOS BARDE</span>
-            </div>
-          </td>
-          <td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-          <td class="rank-3">3</td>
-          <td>
-            <div class="team">
-              <img src="FIFTEEN LEGENDS.png">
-              <span>FIFTEEN LEGENDS</span>
-            </div>
-          </td>
-          <td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-          <td>4</td>
-          <td>
-            <div class="team">
-              <img src="JAPANDE.png">
-              <span>JAPANDE</span>
-            </div>
-          </td>
-          <td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-          <td>5</td>
-          <td>
-            <div class="team">
-              <img src="DSQ.png">
-              <span>DSQ</span>
-            </div>
-          </td>
-          <td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-          <td>6</td>
-          <td>
-            <div class="team">
-              <img src="DEATHFLOW.png">
-              <span>DEATHFLOW</span>
-            </div>
-          </td>
-          <td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-      </tbody>
-    </table>
-
+<tr class="top1">
+<td class="rank">🥇 1</td>
+<td>
+  <div class="team">
+    <img src="EGOIST.png">
+    <span>EGOIST</span>
   </div>
+</td>
+<td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr class="top2">
+<td class="rank">🥈 2</td>
+<td>
+  <div class="team">
+    <img src="EVOS BARDE.png">
+    <span>EVOS BARDE</span>
+  </div>
+</td>
+<td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr class="top3">
+<td class="rank">🥉 3</td>
+<td>
+  <div class="team">
+    <img src="FIFTEEN LEGENDS.png">
+    <span>FIFTEEN LEGENDS</span>
+  </div>
+</td>
+<td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td class="rank">4</td>
+<td>
+  <div class="team">
+    <img src="JAPANDE.png">
+    <span>JAPANDE</span>
+  </div>
+</td>
+<td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td class="rank">5</td>
+<td>
+  <div class="team">
+    <img src="DSQ.png">
+    <span>DSQ</span>
+  </div>
+</td>
+<td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td class="rank">6</td>
+<td>
+  <div class="team">
+    <img src="DEATHFLOW.png">
+    <span>DEATHFLOW</span>
+  </div>
+</td>
+<td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+</tbody>
+</table>
 </div>
 
 <footer>
-  <p>© 2026 Conggeang Community Esports</p>
+<p>© 2026 Conggeang Community Esports</p>
 </footer>
 
 </body>
