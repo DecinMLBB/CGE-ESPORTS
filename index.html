@@ -11,16 +11,16 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
 
 body{
-  background:url("background-home.png") no-repeat center/cover;
-  background-attachment:fixed;
+  background: radial-gradient(circle at top, #0a0f2c, #02030a);
   color:white;
 }
 
+/* OVERLAY */
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background:linear-gradient(rgba(5,5,10,0.4),rgba(5,5,10,0.75));
+  background:linear-gradient(rgba(5,5,10,0.4),rgba(5,5,10,0.8));
   z-index:-1;
 }
 
@@ -30,14 +30,14 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:15px 20px;
-  background:rgba(0,0,0,0.5);
+  background:rgba(0,0,0,0.6);
   backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(0,255,255,0.2);
+  border-bottom:1px solid rgba(0,170,255,0.2);
 }
 
 .logo{
   width:75px;
-  filter:drop-shadow(0 0 8px cyan);
+  filter:drop-shadow(0 0 8px #00aaff);
 }
 
 .menu-nav a{
@@ -46,18 +46,18 @@ nav{
   font-size:0.8rem;
   margin-left:10px;
   padding:6px 10px;
-  border-radius:5px;
+  border-radius:6px;
   transition:0.3s;
 }
 
 .menu-nav a:hover{
-  background:cyan;
+  background:#00aaff;
   color:black;
 }
 
 /* HERO */
 .hero{
-  min-height:65vh;
+  min-height:60vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -68,43 +68,45 @@ nav{
 
 .hero h2{
   font-size:2.5rem;
-  color:cyan;
-  text-shadow:0 0 25px cyan;
+  color:#00aaff;
+  text-shadow:0 0 25px #00aaff;
 }
 
 .hero p{
   margin-top:10px;
-  color:#ddd;
+  color:#ccc;
   font-size:0.9rem;
 }
 
 .highlight{
   margin-top:15px;
-  color:cyan;
-  text-shadow:0 0 20px cyan;
+  color:#00aaff;
+  text-shadow:0 0 15px #00aaff;
 }
 
+/* BUTTON */
 .btn-daftar{
   margin-top:20px;
   padding:12px 28px;
-  background:cyan;
+  background:#00aaff;
   color:black;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
-  box-shadow:0 0 20px cyan;
+  box-shadow:0 0 20px #00aaff;
   transition:0.3s;
 }
 
 .btn-daftar:hover{
   transform:scale(1.08);
-  box-shadow:0 0 35px cyan;
+  box-shadow:0 0 35px #00aaff;
 }
 
+/* INFO */
 .info{
   margin-top:20px;
   font-size:0.8rem;
-  color:#ccc;
+  color:#aaa;
 }
 
 /* MENU */
@@ -115,31 +117,32 @@ nav{
 .menu h2{
   text-align:center;
   margin-bottom:20px;
-  color:cyan;
+  color:#00aaff;
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:12px;
+  gap:15px;
 }
 
 .card{
-  padding:15px;
-  background:rgba(0,0,0,0.5);
-  border:1px solid rgba(0,255,255,0.3);
-  border-radius:10px;
+  padding:18px;
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(0,170,255,0.2);
+  border-radius:12px;
   text-align:center;
   transition:0.3s;
 }
 
 .card:hover{
-  box-shadow:0 0 25px cyan;
+  box-shadow:0 0 25px rgba(0,170,255,0.5);
   transform:translateY(-5px);
 }
 
 .card h3{font-size:0.9rem;}
-.card p{font-size:0.7rem;color:#ccc;}
+.card p{font-size:0.7rem;color:#aaa;}
 
 .card a{
   color:white;
@@ -147,28 +150,28 @@ nav{
   display:block;
 }
 
+/* CTA */
 .card.daftar{
-  border:1px solid cyan;
-  box-shadow:0 0 20px cyan;
-  background:rgba(0,255,255,0.1);
+  border:1px solid #00aaff;
+  box-shadow:0 0 20px rgba(0,170,255,0.5);
+  background:rgba(0,170,255,0.1);
 }
 
-/* SPONSOR (PINDAH KE BAWAH) */
+/* SPONSOR */
 .sponsor-section{
-  margin-top:30px;
+  margin-top:40px;
   padding:30px 20px;
   text-align:center;
-  background:rgba(0,0,0,0.5);
-  backdrop-filter:blur(8px);
-  border-top:1px solid rgba(0,255,255,0.2);
+  background:rgba(255,255,255,0.02);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(0,170,255,0.2);
 }
 
 .sponsor-text{
   font-size:0.8rem;
-  color:cyan;
+  color:#00aaff;
   margin-bottom:20px;
   letter-spacing:3px;
-  text-shadow:0 0 10px cyan;
 }
 
 .sponsor-logo{
@@ -178,12 +181,14 @@ nav{
 }
 
 .sponsor-logo img{
-  width:70px;
+  width:75px;
+  opacity:0.8;
   transition:0.3s;
 }
 
 .sponsor-logo img:hover{
   transform:scale(1.15);
+  opacity:1;
 }
 
 /* FOOTER */
@@ -191,8 +196,8 @@ footer{
   text-align:center;
   padding:15px;
   font-size:0.7rem;
-  color:#aaa;
-  border-top:1px solid rgba(0,255,255,0.2);
+  color:#777;
+  border-top:1px solid rgba(0,170,255,0.2);
 }
 
 /* DESKTOP */
@@ -229,7 +234,6 @@ footer{
   </div>
 </div>
 
-<!-- MENU DI ATAS -->
 <section class="menu">
   <h2>Menu</h2>
 
@@ -244,13 +248,12 @@ footer{
     <div class="card daftar">
       <a href="daftar.html">
         <h3>🔥 Daftar Turnamen</h3>
-        <p>DANA & GoPay</p>
+        <p>Bayar QRIS</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- SPONSOR DI PALING BAWAH -->
 <section class="sponsor-section">
   <p class="sponsor-text">SPONSORSHIP BY</p>
   <div class="sponsor-logo">
