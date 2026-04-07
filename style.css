@@ -1,76 +1,88 @@
 /* TABLE */
 .table-wrapper{
   overflow-x:auto;
-  margin-top:20px;
+  margin-top:25px;
 }
 
+/* TABLE BOX */
 .leaderboard{
   width:100%;
   min-width:600px;
   border-collapse:collapse;
   background:white;
-  border-radius:12px;
+  border-radius:14px;
   overflow:hidden;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  animation:fadeIn 0.6s ease;
 }
 
 /* HEADER */
 .leaderboard th{
   background:#8B0000;
   color:white;
-  padding:14px;
-  font-size:0.8rem;
+  padding:15px;
+  font-size:0.75rem;
   letter-spacing:1px;
+  text-transform:uppercase;
 }
 
 /* CELL */
 .leaderboard td{
-  padding:14px;
+  padding:15px;
   text-align:center;
   border-bottom:1px solid #eee;
   font-size:0.8rem;
 }
 
-/* HOVER ROW */
+/* ROW */
 .leaderboard tr{
   transition:0.25s ease;
 }
 
+/* HOVER */
 .leaderboard tr:hover{
   background:#fff5f5;
   transform:scale(1.01);
 }
 
-/* TEAM (LOGO + NAMA) */
+/* TEAM */
 .team{
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-start;
   gap:10px;
 }
 
+/* LOGO */
 .team img{
-  width:36px;
-  height:36px;
+  width:38px;
+  height:38px;
   object-fit:cover;
-  border-radius:6px;
+  border-radius:8px;
   border:1px solid #ddd;
-  transition:0.25s;
+  background:#fff;
+  padding:2px;
+  transition:0.3s;
+}
+
+/* NAMA TIM */
+.team span{
+  font-weight:600;
 }
 
 /* ANIMASI LOGO */
 .leaderboard tr:hover .team img{
-  transform:scale(1.15);
+  transform:scale(1.15) rotate(2deg);
   border-color:#ff2d2d;
 }
 
-/* RANK STYLE */
+/* RANK */
 .leaderboard td:first-child{
   font-weight:bold;
-  font-size:0.9rem;
+  font-size:0.95rem;
 }
 
-/* TOP 1 (JUARA) */
+/* TOP 1 */
 .top1{
   background:linear-gradient(90deg,#fff3cd,#ffffff);
 }
@@ -81,11 +93,11 @@
 
 /* TOP 2 */
 .top2{
-  background:#f8f8f8;
+  background:#f4f4f4;
 }
 
 .top2 td:first-child{
-  color:#999;
+  color:#888;
 }
 
 /* TOP 3 */
@@ -97,6 +109,18 @@
   color:#cd7f32;
 }
 
+/* ANIMASI MASUK */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
 /* RESPONSIVE */
 @media(max-width:600px){
 
@@ -104,6 +128,10 @@
   .leaderboard td{
     font-size:0.7rem;
     padding:10px;
+  }
+
+  .team{
+    justify-content:center;
   }
 
   .team img{
