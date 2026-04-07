@@ -1,76 +1,107 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jadwal FF - CCE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal FF - CCE</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
-    body {
-      background: radial-gradient(circle at top, #0f0f1a, #050509);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Orbitron',sans-serif;
+}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 20px;
-      background: rgba(0,0,0,0.6);
-      border-bottom: 1px solid rgba(0,255,255,0.2);
-    }
+body{
+  background:#0a0a0a;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
 
-    nav h1 {color: cyan;}
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
+  background:#111;
+  border-bottom:2px solid #ff2e2e;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 10px;
-      font-size: 0.8rem;
-    }
+nav h1{
+  color:#ff2e2e;
+}
 
-    nav a:hover {color: cyan;}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:10px;
+  font-size:0.8rem;
+  padding:6px 10px;
+  border-radius:6px;
+  transition:0.3s;
+}
 
-    .container {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-    }
+nav a:hover{
+  background:#ff2e2e;
+}
 
-    .coming {
-      font-size: 2rem;
-      color: cyan;
-      text-shadow: 0 0 20px cyan;
-      animation: glow 1.5s infinite alternate;
-    }
+/* CONTAINER */
+.container{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding:20px;
+}
 
-    .sub {
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-top: 10px;
-    }
+/* BOX */
+.box{
+  background:#111;
+  border:1px solid #222;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 0 20px rgba(255,46,46,0.2);
+}
 
-    @keyframes glow {
-      from { text-shadow: 0 0 10px cyan; }
-      to { text-shadow: 0 0 25px cyan; }
-    }
+/* TITLE */
+.coming{
+  font-size:2rem;
+  color:white;
+  letter-spacing:1px;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 0.7rem;
-      color: #777;
-      border-top: 1px solid rgba(0,255,255,0.2);
-    }
-  </style>
+/* SUB */
+.sub{
+  color:#aaa;
+  font-size:0.9rem;
+  margin-top:10px;
+}
+
+/* LINE */
+.line{
+  width:60px;
+  height:3px;
+  background:#ff2e2e;
+  margin:15px auto;
+  border-radius:2px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:15px;
+  font-size:0.7rem;
+  color:#666;
+  border-top:1px solid #222;
+}
+</style>
 </head>
 
 <body>
@@ -85,12 +116,15 @@
 </nav>
 
 <div class="container">
-  <div class="coming">COMING SOON!</div>
-  <div class="sub">Jadwal Free Fire sedang disiapkan...</div>
+  <div class="box">
+    <div class="coming">COMING SOON</div>
+    <div class="line"></div>
+    <div class="sub">Jadwal Free Fire sedang disiapkan</div>
+  </div>
 </div>
 
 <footer>
-  <p>© 2026 Conggeang Community Esports</p>
+<p>© 2026 Conggeang Community Esports</p>
 </footer>
 
 </body>
