@@ -14,9 +14,7 @@ nav{
   background:#8B0000;
 }
 
-.logo{
-  width:70px;
-}
+.logo{width:70px;}
 
 .menu-nav a{
   color:white;
@@ -31,6 +29,15 @@ nav{
   background:white;
   color:#8B0000;
 }
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin:30px 0;
+  color:#8B0000;
+}
+
+.title span{color:#ff2d2d;}
 
 /* HERO */
 .hero{
@@ -66,6 +73,21 @@ nav{
   text-decoration:none;
   font-weight:bold;
 }
+
+/* BUTTON WA */
+.btn-wa{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 20px;
+  background:#ff2d2d;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:0.85rem;
+  font-weight:bold;
+}
+
+.btn-wa:hover{background:#cc0000;}
 
 /* MENU */
 .menu{
@@ -111,6 +133,84 @@ nav{
   border:2px solid #ff2d2d;
 }
 
+/* CONTAINER (daftar, jadwal, dll) */
+.container{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+/* QR */
+.qr{margin:20px 0;}
+
+.qr img{
+  width:220px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+/* NOTE */
+.note{
+  text-align:left;
+  margin-top:10px;
+}
+
+.note p{margin:5px 0;}
+
+/* TABLE */
+.table-wrapper{
+  overflow-x:auto;
+  padding:0 15px;
+}
+
+table{
+  width:100%;
+  min-width:600px;
+  border-collapse:collapse;
+  background:white;
+}
+
+th{
+  background:#8B0000;
+  color:white;
+  padding:12px;
+}
+
+td{
+  padding:12px;
+  text-align:center;
+}
+
+tr{
+  border-bottom:1px solid #eee;
+}
+
+tr:hover{
+  background:#f9f9f9;
+}
+
+/* TEAM */
+.team{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.team img{
+  width:40px;
+  height:40px;
+  border-radius:6px;
+}
+
+/* RANK */
+.rank{font-weight:bold;}
+
+/* TOP 3 */
+.top1{background:#fff5f5;}
+.top2{background:#fafafa;}
+.top3{background:#fff8f2;}
+
 /* SPONSOR */
 .sponsor-section{
   margin-top:30px;
@@ -133,9 +233,7 @@ nav{
   gap:20px;
 }
 
-.sponsor-logo img{
-  width:70px;
-}
+.sponsor-logo img{width:70px;}
 
 /* FOOTER */
 footer{
@@ -145,6 +243,17 @@ footer{
   color:#777;
   background:white;
   border-top:1px solid #ddd;
+}
+
+/* COMING SOON */
+.coming{
+  font-size:2rem;
+  color:#8B0000;
+}
+
+.sub{
+  color:#777;
+  margin-top:10px;
 }
 
 /* DESKTOP */
