@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Turnamen - CCE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+.form-container{
+  max-width:500px;
+  margin:40px auto;
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+.form-group{
+  margin-bottom:15px;
+  text-align:left;
+}
+
+.form-group label{
+  font-size:0.75rem;
+  color:#555;
+}
+
+.form-group input,
+.form-group select{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  font-family:'Orbitron',sans-serif;
+  font-size:0.8rem;
+}
+
+.qr-box{
+  text-align:center;
+  margin:20px 0;
+}
+
+.qr-box img{
+  width:200px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+.note{
+  font-size:0.7rem;
+  color:#666;
+  margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-left">
+    <img src="logo.png" class="logo">
+    <h1 class="brand">CCE</h1>
+  </div>
+
+  <div class="menu-nav">
+    <a href="index.html">Home</a>
+    <a href="leaderboard-ml.html">ML</a>
+    <a href="leaderboard-ff.html">FF</a>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<section class="menu">
+  <h2>Daftar Turnamen</h2>
+
+  <div class="form-container">
+
+    <div class="form-group">
+      <label>Nama Tim</label>
+      <input type="text" placeholder="Masukkan nama tim">
+    </div>
+
+    <div class="form-group">
+      <label>Nama Ketua</label>
+      <input type="text" placeholder="Nama ketua tim">
+    </div>
+
+    <div class="form-group">
+      <label>No WhatsApp</label>
+      <input type="text" placeholder="08xxxxxxxxxx">
+    </div>
+
+    <div class="form-group">
+      <label>Pilih Game</label>
+      <select>
+        <option>Mobile Legends</option>
+        <option>Free Fire</option>
+      </select>
+    </div>
+
+    <div class="qr-box">
+      <p><b>Pembayaran QRIS</b></p>
+      <img src="qris.png">
+      <p class="note">Biaya: Rp 35.000 / Tim</p>
+    </div>
+
+    <a class="btn-daftar"
+       href="https://wa.me/6285156287358?text=Halo%20Admin%20CCE%0ASaya%20mau%20daftar%20turnamen%0A%0ANama%20Tim%20:%20%0ANama%20Ketua%20:%20%0AGame%20:%20%0A%0ASaya%20akan%20kirim%20bukti%20transfer."
+       target="_blank">
+       KIRIM & KONFIRMASI
+    </a>
+
+    <p class="note">
+      • Wajib kirim bukti transfer<br>
+      • Sertakan nama tim & game<br>
+      • Slot terbatas, cepat siapa dia dapat
+    </p>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Conggeang Community Esports</p>
+</footer>
+
+</body>
+</html>
